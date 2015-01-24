@@ -1,0 +1,76 @@
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  XTITLE  <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+	       http://www.cs.indiana.edu/~kinzler/xtitle
+
+Xtitle is a relatively simple shell script program that, when run in an
+xterm or xterm-like window, will set the window's title and/or icon name
+to the script's arguments.  See the included man page for full details.
+
+Normally, I wouldn't think of packaging and distributing a tool this
+straightforward, but it snuck out into general usage anyway (thanks to
+the search engines, I suppose) and was well received.  So here it is
+with a man page, Imakefile and all.
+
+----------------------------  INSTALLATION  ----------------------------
+
+Xtitle may be installed either as a regular X11 program or manually in
+any desired locations, including your home directory.
+
+A)  AS AN X11 PROGRAM
+
+    The usual routine
+
+	xmkmf
+	make install
+	make install.man
+	make clean
+
+    should properly install the xtitle script in your X11 bin directory
+    and the man page file in your X11 man directory.
+
+B)  MANUALLY
+
+    You can copy the "xtitle.sh" file here into any directory in your
+    PATH, probably named just "xtitle" then.  Make sure the copy's made
+    executable.  The "xtitle.man" and/or "xtitle.html" man pages can be
+    installed as/where you desire.
+
+---------------------------  GPL COPYRIGHT  ----------------------------
+
+xtitle
+Copyright (C) 1993-2009 Stephen B Kinzler
+
+This program is free software; you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation; either version 2 of the License, or any
+later version.
+
+This program is distributed in the hope that it will be useful, but
+WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY
+or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General Public License
+for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program (see the file "COPYING"); if not, write to the
+Free Software Foundation, Inc., 59 Temple Place, Suite 330, Boston,
+MA 02111-1307 USA
+
+---------------------  SOFTWARE BY STEVE KINZLER  ----------------------
+
+Unix Home Dir	http://www.cs.indiana.edu/~kinzler/home.html
+		Many scripts and config files for Unix/X11 environments
+align		http://www.cs.indiana.edu/~kinzler/align
+		A text column alignment filter
+vshnu		http://www.cs.indiana.edu/~kinzler/vshnu
+		A visual shell and CLI shell supplement
+webrowse	http://www.cs.indiana.edu/~kinzler/webrowse
+		Tools to interface web browsers to the Unix user CLI
+xtitle		http://www.cs.indiana.edu/~kinzler/xtitle
+		Set window title and icon name for an X11 terminal window
+z		http://www.cs.indiana.edu/~kinzler/z
+		A convenience frontend for tar, gzip, zip, etc
+
+========================================================================
+
+Steve Kinzler <kinzler@cs.indiana.edu>			   December 2009
+http://www.cs.indiana.edu/~kinzler

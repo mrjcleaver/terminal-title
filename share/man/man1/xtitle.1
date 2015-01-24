@@ -1,0 +1,65 @@
+.TH XTITLE 1 1.0.2
+.SH NAME
+xtitle \- set window title and icon name for an X11 terminal window
+.SH SYNOPSIS
+.B xtitle
+[
+.B \-tiq
+] [
+.B \-\-
+]
+.I string ...
+| [
+.B \-V
+] [
+.B \-h
+]
+.SH DESCRIPTION
+.I Xtitle
+will set the window title and/or the icon name of the terminal window
+in which it is run to be its command line arguments.
+It does this by outputting the appropriate
+.IR xterm (1)
+control sequence characters.
+Unless suppressed,
+.I xtitle
+will also report the settings it has made.
+.SH OPTIONS
+.PP
+.TP 10
+\-t, \-\-title
+Only set the window title.
+Default sets both.
+.TP 10
+\-i, \-\-icon
+Only set the icon name.
+Default sets both.
+.TP 10
+\-q, \-\-quiet
+Quiet mode.
+Doesn't report the settings performed.
+.TP 10
+\-V, \-\-version
+Only prints the program version.
+.TP 10
+\-h, \-\-help
+Prints a helpful usage message.
+.TP 10
+\-\-
+Interprets all following arguments as strings instead of options.
+.SH CAVEATS
+.I Xtitle
+is known to work with
+.IR xterm (1)
+and
+.IR dtterm (1).
+The effect of the control sequences in other terminals is not known,
+though I wouldn't expect any problems.
+.SH VERSION
+1.0.2
+.SH AUTHOR
+Steve Kinzler, kinzler@cs.indiana.edu, Nov 1993/Nov 1998/Mar 2000/Dec 2009
+.SH URL
+http://www.cs.indiana.edu/~kinzler/xtitle/
+.SH "SEE ALSO"
+xterm(1), dtterm(1)
