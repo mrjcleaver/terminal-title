@@ -1,0 +1,72 @@
+#!/bin/sh -
+PATH=/bin:/usr/bin; export PATH
+
+# Terminal-title - set window title and icon name for a mac terminal window
+# https://github.com/mrjcleaver/terminal-title
+# GPL v2.0 Derived from 
+# xtitle - set window title and icon name for an X11 terminal window
+# Steve Kinzler, kinzler@cs.indiana.edu, Nov 93/Nov 98/Mar 00/Dec 09
+# see website http://www.cs.indiana.edu/~kinzler/xtitle/
+# http://www.cs.indiana.edu/~kinzler/home.html#x11
+
+version=1.0.3   # added terminal-title, made quiet by default
+version=1.0.2	# 2009-12-18: add -V option, long options
+version=1.0.1	# 2009-12-10: add copyright/GPL notice for debian pkg
+
+
+dflttarg=tiq
+target=; bad=
+
+while :
+do
+	case $# in
+	0)	break;;
+	*)	case "$1" in
+		-[tiqV]*)	target="${target}$1";;
+		--title)	target="${target}-t";;
+		--icon)		target="${target}-i";;
+		--quiet)	target="${target}-q";;
+		--version)	target="${target}-V";;
+
+		--)		shift; break;;
+		-h|--help)	bad=t; break;;
+		-*)		bad=t; echo "$0: unknown option ($1)" 1>&2;;
+		*)		break;;
+		esac
+		shift;;
+	esac
+done
+
+case "$target" in
+*V*)	echo "$version"; exit 0;;
+esac
+
+case "$#,$bad" in
+0,*|*,?*)	cat << EOF 1>&2
+usage: $0 [ -tiq ] string ... | -V
+	-t, --title	set window title
+	-i, --icon	set icon name
+	-q, --quiet	quiet mode, don't report settings
+	-V, --version	only output program version
+Without -t or -i options, both the window title and icon name are set.
+Version $version
+EOF
+		exit 1;;
+esac
+
+case "$target" in
+''|-q)	target="$target$dflttarg";;
+esac
+
+case "$target" in
+*t*)	case "$target" in
+	*q*)	echo "]2;$*" | tr -d '\012';;
+	*)	echo "]2;$*title = $*";;
+	esac;;
+esac
+case "$target" in
+*i*)	case "$target" in
+	*q*)	echo "]1;$*" | tr -d '\012';;
+	*)	echo "]1;$*icon  = $*";;
+	esac;;
+esac
