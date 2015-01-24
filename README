@@ -34,6 +34,12 @@ B)  MANUALLY
     PATH, probably named just "xtitle" then.  Make sure the copy's made
     executable.  The "xtitle.man" and/or "xtitle.html" man pages can be
     installed as/where you desire.
+    
+C) (For the Mac) VIA BREW    
+
+    brew install xtitle
+    http://kinzler.com/me/home.html
+    https://github.com/Homebrew/homebrew/blob/master/Library/Formula/xtitle.rb
 
 ---------------------------  GPL COPYRIGHT  ----------------------------
 
@@ -57,20 +63,5 @@ MA 02111-1307 USA
 
 ---------------------  SOFTWARE BY STEVE KINZLER  ----------------------
 
-Unix Home Dir	http://www.cs.indiana.edu/~kinzler/home.html
+Unix Home Dir	http://kinzler.com/me/home.html
 		Many scripts and config files for Unix/X11 environments
-align		http://www.cs.indiana.edu/~kinzler/align
-		A text column alignment filter
-vshnu		http://www.cs.indiana.edu/~kinzler/vshnu
-		A visual shell and CLI shell supplement
-webrowse	http://www.cs.indiana.edu/~kinzler/webrowse
-		Tools to interface web browsers to the Unix user CLI
-xtitle		http://www.cs.indiana.edu/~kinzler/xtitle
-		Set window title and icon name for an X11 terminal window
-z		http://www.cs.indiana.edu/~kinzler/z
-		A convenience frontend for tar, gzip, zip, etc
-
-========================================================================
-
-Steve Kinzler <kinzler@cs.indiana.edu>			   December 2009
-http://www.cs.indiana.edu/~kinzler
